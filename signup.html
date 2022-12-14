@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./signin.css">
+    <style>
+  
+    </style>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="nav_logo"> 
+                    <img src="https://tv.apple.com/assets/brands/Apple_TV_plus_logo_white-2721485772b7d06c4e33379ce990870e.svg
+                    " alt="">
+                </div>
+             <div class="btn">
+                <input  class="search" type="search" placeholder="Search">
+             <!-- <input type="submit" placeholder="" value="SignIn" class="signin"> -->
+             <button class="signin"><a href="./signup.html">SignIn</a></button>
+                
+            
+              </div>
+              </div> 
+             </div>
+            </div>
+        </nav>
+    </header>
+<main>
+    <!-- <div class="nav">
+      <a href="./login.html">Login</a>
+      <a href="./Signup.html">Signin</a>
+    </div> -->
+    <div id="signup">
+     
+      <h1>Sign up for a FREE Smart TV trial</h1>
+      <br>
+      <br>
+      <form>
+        <label for="">Name</label>
+        <br>
+        <input type="text" id="name" placeholder="Enter your name">
+        <br>
+        <br>
+        <label for="">Email</label>
+        <br>
+        <input type="email" id="email" placeholder="Enter your email">
+        <br>
+        <br>
+        <label for="">Password</label>
+        <br>
+        <input type="password"  id="password" placeholder="Enter your password">
+        <br>
+        <br>
+        <input type="submit" value="Sign in" id="su"/>
+        <br>
+        <br>
+        <p>Try free for 14 days. No credit card required.
+
+          By signing up, you agree to our <u>terms</u> and <u>privacy policy.</u></p>
+
+          <br>
+          <p>Are you already registered? <u><a href="login.html"><h3>Log in here!</h3></u></p>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
+
+<script>
+    let acc = document.querySelector("form");
+    acc.addEventListener("submit",function(event){
+     event.preventDefault();
+    let mat =JSON.parse(localStorage.getItem("account-data"))||[];
+   let obj={
+     name:acc.name.value,
+     email:acc.email.value,
+     password:acc.password.value,
+
+   }
+   mat.push(obj)
+   console.log(mat)
+   if(obj.name=="" || obj.email=="" || obj.password==""){
+     alert("Please fill the form ")
+   }else{
+     alert("Sign up Successfully")
+     localStorage.setItem("account-data",JSON.stringify(mat))
+     window.location.href="login.html"
+
+   }
+   // localStorage.setItem("account-data",JSON.stringify(mat))
+ })
+</script>

@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./login.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="nav_logo"> 
+                    <img src="https://tv.apple.com/assets/brands/Apple_TV_plus_logo_white-2721485772b7d06c4e33379ce990870e.svg
+                    " alt="">
+                </div>
+             <div class="btn">
+                <input  class="search" type="search" placeholder="Search">
+             <!-- <input type="submit" placeholder="" value="SignIn" class="signin"> -->
+             <button class="signin"><a href="./signup.html">SignIn</a></button>
+                
+            
+              </div>
+              </div> 
+             </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- <div class="nav">
+            <a href="./login.html">Login</a>
+            <a href="./Signup.html">Signin</a>
+          </div> -->
+          <div id="signin">
+            
+            <h1>Login For Smart Tv trial</h1>
+            <br>
+            <p>Start tracking your productivity in less than a minute!</p>
+            <br>
+            <form>
+              <label for="">Email</label>
+              <br>
+              <input type="email" id="email" placeholder="Type in your email address">
+              <br>
+              <br>
+              <label for="">Password</label>
+              <br>
+              <input type="password"  id="password" placeholder="Type in your password">
+              <br>
+              <br>
+              <input type="submit" value="Login" id="sn"  />
+              <br>
+              <br>
+              <p>Try free for 14 days. No credit card required. </p>
+    
+               <p>By signing up, you agree to our <u>terms</u> and <u>privacy policy.</u></p>
+               <br>
+               <br>
+               <h4>Don’t have an account yet?<a href="./Signup.html"><h3><u>Sign up here!</u></h3></a></h4>
+            </form>
+          </div>
+        </main>
+</body>
+</html>
+<script>
+    let data = JSON.parse(localStorage.getItem("account-data"))
+     
+  
+       let newls = document.querySelector("form");
+       newls.addEventListener("submit" ,function(event){
+        event.preventDefault();
+       let mail = document.querySelector("#email").value
+       let pass = document.querySelector("#password").value
+         let flag=false;
+       for(let i=0; i<data.length; i++){
+        if(mail==data[i].email && pass==data[i].password){
+          flag=true;
+         
+       }
+      }
+       
+       if(flag==true){
+        
+         alert("logged in Successfully")
+        window.location.href="index.html";
+        // console.log(window.location.href="index.html")
+        
+      }
+      else{
+        alert("Wrong Password or Email")
+        // window.location.href="Signup.html"
+      }
+     
+    
+  
+       });
+  
+  
+       
+       
+  
+  </script>
