@@ -4,13 +4,13 @@
 
 #container1 {
     width: 100%;
-    height: 350px;
+    height: 400px;
     /* background-color: black; */
 }
 
 #heading {
     color: white;
-    width: 60%;
+    width: 100%;
     height: 80px;
 
     margin: auto;
