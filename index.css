@@ -22,8 +22,8 @@ nav .navbar .btn{
   justify-content: end;
 }
 
- .nav_logo>img{ 
-   width: 30%;
+ .nav_logo>a>img{ 
+   width: 8%;
 }
 .btn>.search{
     font-size: 17px;
@@ -60,8 +60,31 @@ nav .navbar .btn{
     text-decoration: none;
 }
 
-@media all and (min-width:10px) and (max-width :668px) {
+@media all and (min-width:300px) and (max-width :900px) {
     header{
-        width:30%;
+        width:50%;
+    }
+    .btn>.signin{
+        width: 70%;
+       
     }
 }
+
+
+/* /////////// */
+#tasks{
+    display: grid;
+     grid-template-columns: repeat(300px,1fr);
+    /* grid-template-rows:repeat( 300px 1fr); */
+    margin: auto;
+    justify-content: center; 
+}
+#tasks>.movie>img{
+    width: 30%;
+}
+
+
+
+
+
+

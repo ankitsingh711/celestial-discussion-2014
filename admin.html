@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            background-color: blueviolet;
+            
+            color: white;
+            text-align: center;
+            margin: auto;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        #tasks>.movie{
+        display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 300px;
+    /* justify-content: spa;  */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    gap: 10px;
+}
+
+#tasks>.movie>.des{
+    text-align: center;
+    align-items: center;
+    padding-top: 50px;
+    /* background-color: rgb(51,51,51); */
+    color:black
+
+}
+#tasks>.movie>.des>button{
+   background-color: blueviolet;
+   border: none;
+   padding: 10px;
+    color: white;
+    gap: 10px;
+}
+#tasks>.movie>.des>button:hover{
+    background-color: grey;
+    color: white;
+}
+#tasks>.movie>.des>#remove:hover{
+    background-color: grey;
+    color: white;
+}
+#tasks>.movie>.des>#remove{
+   background-color: red;
+   border: none;
+   padding: 10px;
+    color: white;
+    gap: 10px;
+}
+#tasks>.movie>.img>img{
+    height: 300px;
+    width: 100%;
+    padding: 5px;
+}
+/* #img{
+    width: 50%;
+} */
+label{
+    font-weight: bold;
+}
+form{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 20%;
+    padding: 30px;
+    /* margin: ; */
+}
+#btn{
+    background-color: blueviolet;
+    color: antiquewhite;
+    border: none;
+    padding: 8px 12px;
+}
+    </style>
+</head>
+<body>
+    <h1>Admin Side</h1>
+
+    <h2>Add New Movie here!</h2>
+    <form>
+        <!-- <input type="id", placeholder="id" id="id"> -->
+        <label for="">Name</label><br>
+        <input type="text" placeholder="name" id="name" required><br><br>
+        <label for="">Year</label><br>
+        <input type="number" placeholder="Yearname" id="year" required><br><br>
+        <label for="">Language</label><br>
+        <!-- <input type="text" placeholder="language" id="language" required><br><br> -->
+        <select  id="language" >
+            <option value="">Select</option>
+            <option value="English">English</option>
+            <option value="Hindi">Hindi</option>
+            <option value="Bengali">Bengali</option>
+            <option value="Kannada">Kannada</option>
+        </select><br><br>
+        <label for="">ImageURL</label><br>
+        <input type="url" placeholder="imageurl" id="img" required><br><br>
+        <input type="button" value="Submit" id="btn">
+    </form>
+<hr>
+    <div id="tasks">
+  
+    </div>
+</body>
+</html>
+<script>
+
+
+let delbtn = document.getElementById("btn")
+delbtn.addEventListener("click", fetchdata)
+let mat = JSON.parse(localStorage.getItem("data"))||[]
+
+async function fetchdata(){
+    let imageurl = document.getElementById("img")
+    let name = document.getElementById("name")
+    let year = document.getElementById("year")
+    let language = document.getElementById("language")
+    let obj ={
+        name:name.value,
+        img:imageurl.value,
+        year:year.value,
+        language:language.value
+    }
+mat.push(obj)
+if(obj.name=="" || obj.year=="" || obj.language=="" || obj.imageurl==""){
+alert("All the input required")
+}else{
+    localStorage.setItem("data", JSON.stringify(mat))
+    DisplayData(mat)
+   alert("Movie added Successfully")
+}
+
+}
+// fetchdata()
+
+
+function DisplayData(data){
+  let main = document.getElementById("tasks")
+  main.innerHTML=""
+  let newdata = data.map((item)=>{
+    return`
+    <div class="movie">
+        <div class="img"> <img src="${item.img}" alt=""></div>
+               <div class="des">     
+                     <h3 id="title">Movie name : ${item.name}</h3>
+                     <h3 id="title"> Release Year : ${item.year}</h3>
+                     <h3 id="title"> Language : ${item.language}</h3>
+                     <button id="remove">DELETE</button>
+                     <button id="add">ADD</button>
+                     </div>
+              </div>
+              <hr>
+              `
+  })
+  main.innerHTML= newdata.join(" ")
+
+}
+//   <h3 id="price">${item.language}</h3>
+
+
+</script>
