@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="innerPage.css">
+</head>
+
+<body>
+    <div id="nav">
+        <div id="innerNav">
+            <div><img style="width: 40px;" src="images\WhatsApp Image 2022-12-13 at 16.28.27.jpeg" alt=""></div>
+            <div>Store</div>
+            <div>Mac</div>
+            <div>ipad </div>
+            <div>iPhone</div>
+            <div>Watch</div>
+            <div>Airpods</div>
+            <div>TV & Home</div>
+            <div>Only on Apple</div>
+            <div>Accessories</div>
+            <div>Support</div>
+            <div><img src="images\Screenshot 2022-12-15 100706.png" alt=""></div>
+            <div><img src="images\Screenshot 2022-12-15 100732.png" alt=""></div>
+        </div>
+    </div>
+    <div id="container">
+        <div id="hearderr">
+            <div style="font-size:xx-large;">Smart TV+</div>
+
+            <div><a href="">Communities</a> <a href="">Contact Support</a></div>
+        </div>
+        <hr>
+        <div id="dataDiv">
+            <a id="tsblee" href="">Table of Contents +</a>
+            <div id="headingg">
+                <h1>Watch on Apple TV (4K, HD, and 3rd generation)</h1>
+            </div>
+
+    <img id="tv" style="width:35%"
+    src="https://help.apple.com/assets/62D9ED344BF96A251B309FCF/62D9ED364BF96A251B309FD7/en_US/cba81d6df029708847d85f8e9565d2b0.png"
+    alt="">
+
+           
+            <p style=" font-size :17px;color: #333; padding: 10px;">If you have an Smart TV 4K, an Smart TV HD, or a third-generation
+                Smart TV, you can find Smart TV+, Smart
+                TV channels, movies, and TV shows in the Smart TV app.</p>
+            <hr>
+
+            <div class="FAQcontainer">
+                <div class="accordion">
+                    <div class="accordionItem" id="question1">
+                        <a class="accordion-link" href="#question1">
+                            <strong>iPhone, iPad, and iPod touch</strong>
+
+                            <ion-icon class="symbl" id="show" name="chevron-down-outline"></ion-icon>
+                            <ion-icon class="symbl" id="remv" name="chevron-up-outline"></ion-icon>
+                        </a>
+                        <div class="answer">
+                            <a href="iphone.html", target="_blank"> Click to find the steps to watch Smart TV+ on iPhone, iPad, and iPod touch </a>
+                           
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <hr>
+            <div class="FAQcontainer">
+                <div class="accordion">
+                    <div class="accordionItem" id="question2">
+                        <a class="accordion-link" href="#question2">
+                            <strong>If you don’t have the latest version of iOS or iPadOSS</strong>
+
+                            <ion-icon class="symbl" id="show" name="chevron-down-outline"></ion-icon>
+                            <ion-icon class="symbl" id="remv" name="chevron-up-outline"></ion-icon>
+                        </a>
+                        <div class="answer">
+                            <a href="">If you don’t have the latest version of iOS or iPadOS</a>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <hr>
+
+            <strong>
+                <p id="smallInfo">Apple TV+ requires a subscription. Not all features and content are available in all
+                    countries or regions, or on all streaming devices.</p>
+            </strong>
+
+
+
+        </div>
+        <hr>
+        <div id="help">
+            Helpful?
+            <button id="Yes" class="help">Yes</button>
+            <button id="No" class="help">No</button>
+
+        </div>
+        <div id="appnd"></div>
+        <hr>
+        <div >
+            <div id="end">
+                <div> 
+                    <h2>Previous</h2>
+                    </div>
+            <div>
+                <h2>Next</h2>
+                
+                <a href="">Smart TV and Streaming Devices</a>
+            </div>
+            
+        </div>
+        <hr>
+    </div>
+   
+    
+    
+        
+
+    </div>
+    <div id="copywrite">
+        <p>
+            Copywrite 2022 Smart Inc all rights reserved
+            
+        </p>
+        <p>
+            Internet service terms | Smart TV and privacy | Cookie policy |Support
+        </p>
+    
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
+<script>
+    document.querySelector("#Yes").addEventListener("click",()=>{
+        document.querySelector("#help").innerHTML=null;
+        document.querySelector("#appnd").innerHTML=`    <p>We’re glad this article helped.</p>
+        <textarea class="textbx" name="Anything else you want let us know?" placeholder="Anything else you want let us know?(Optional)" id="" cols="40" rows="5"></textarea>
+        <br>
+<button class="helps" id="helps">Submit</button>`
+        
+let submitBtn=document.querySelector(".helps");
+//console.log(submitBtn)
+submitBtn.addEventListener("click", ()=>{
+        alert("Thank you for you lovely feedback :)Feedback Received Succesfully ")
+ })
+})
+    document.querySelector("#No").addEventListener("click",()=>{
+        document.querySelector("#help").innerHTML=null;
+        document.querySelector("#appnd").innerHTML=`    <p>We’re glad this article helped.</p>
+        <textarea class="textbx" name="Anything else you want let us know?" placeholder="Anything else you want let us know?(Optional)" id="" cols="40" rows="5"></textarea>
+        <br>
+<button class="helps" >Submit</button>`
+let submitBtn=document.querySelector(".helps");
+//console.log(submitBtn)
+submitBtn.addEventListener("click", ()=>{
+        alert("Sorry for the inconveice, Feedback Received Succesfully ")
+    })   
+        
+    })
+</script>
