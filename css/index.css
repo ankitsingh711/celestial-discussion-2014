@@ -41,9 +41,6 @@ body{
     width: 100%;
 }
 
-.txt{
-    position: relative;
-}
 .main_slide{
     width: 90%;
     margin: auto;
@@ -77,6 +74,19 @@ body{
     position:relative
 }
 
+.static_slide-track{
+    display: flex;
+    position:relative;
+    width:95%;
+    margin: auto;
+}
+
+.txt{
+    position: relative;
+    top: 50%;
+    left:20%;
+}
+
 .static_div
 {
     display: flex;
@@ -91,12 +101,15 @@ body{
 {
     position: relative;
 }
+.card{
+    position: relative;
+}
 .playbtn
 {
     position:absolute;
-    top:40%;
+    bottom:0%;
     right:55%;
-    font-size: 30px;
+    font-size: 40px;
     color: white;
 }
 .playbtn:hover
@@ -107,6 +120,14 @@ body{
 .slide-track:hover
 {
     animation-play-state: paused;
+}
+
+.cardss{
+    width: 95%; 
+}
+#watch_pres{
+    margin-left: 60px;
+    font-size: 18px;
 }
 
 @keyframes scroll
@@ -148,11 +169,71 @@ body{
     position: absolute;
 }
 
-.static_cards{
+.cards_main{
     width: 90%;
     margin: auto;
 }
 
-.static_slide-track{
+.cards{
+    width: calc(250px*30);
+    margin: auto;
     display: flex;
+    justify-content: space-evenly;
+    height:2rem;
+}
+.cards>card{
+    width: 18rem;
+    border-radius: 10px;
+}
+
+.cards img{
+    width: 100%;
+}
+
+#watch_movie{
+    width: 100%;
+    margin: auto;
+}
+.playbtn2
+{
+    position:absolute;
+    top:45%;
+    right:55%;
+    font-size: 30px;
+    color: white;
+}
+.playbtn2:hover
+{
+    cursor: pointer;
+}
+
+.card_mains{
+    width: 90%;
+    margin: auto;
+}
+
+.main2{
+    width: 100%;
+    position: relative;
+}
+
+.main2>img{
+    width: 100%;
+    height: 450px;
+}
+
+.mainText{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    color: white;
+    height: 200px;
+    width: 30%;
+}
+
+.fa-play{
+    font-size: 30px;
+    margin-top: 20px;
+    background-color: white;
+    width: 100px;
 }
