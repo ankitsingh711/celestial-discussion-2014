@@ -1,6 +1,10 @@
+
 body{
     margin: 0px;
     padding: 0px;
+    font-family: 'Abyssinica SIL', serif;
+    font-family: 'EB Garamond', serif;
+    overflow-x: hidden;
 }
 
 .nav{
@@ -9,6 +13,7 @@ body{
     justify-content: space-between;
     background-color: black;
     position: fixed;
+    z-index: 99;
 }
 
 .signin{
@@ -20,8 +25,8 @@ body{
 }
 
 .search{
-    margin-top: 8px;
-    height: 1.3rem;
+    margin-top: 5px;
+    height: 1.8rem;
     border-radius: 7px;
 }
 
@@ -36,25 +41,199 @@ body{
     width: 100%;
 }
 
-.txt{
-    position: relative;
+.main_slide{
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+#watch_pre, .slide_txt{
+    font-size: 18px;
 }
 
 .slidemain{
-    width: 95%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    column-gap: 10px;
+    width:90%;
+    margin:auto
 }
 
-.slidemain img{
+/* Sliding css here */
+.slider{
+    /* height: 200px; */
+    margin: auto;
+    position: relative;
+    width: 95%;
+    display: grid;
+    place-items: center;
+}
+
+.slide-track
+{
+    display: flex;
+    width: calc(250px*100);
+    animation: scroll 40s linear infinite;
+    position:relative
+}
+
+.static_slide-track{
+    display: flex;
+    position:relative;
+    width:95%;
+    margin: auto;
+}
+
+.txt{
+    position: relative;
+    top: 50%;
+    left:20%;
+}
+
+.static_div
+{
+    display: flex;
+    width: calc(250px*100);
+}
+
+.static_div>img
+{
+    width: 100%;
+}
+.slide
+{
+    position: relative;
+}
+.card{
+    position: relative;
+}
+.playbtn
+{
+    position:absolute;
+    bottom:0%;
+    right:55%;
+    font-size: 40px;
+    color: white;
+}
+.playbtn:hover
+{
+    cursor: pointer;
+}
+
+.slide-track:hover
+{
+    animation-play-state: paused;
+}
+
+.cardss{
+    width: 95%; 
+}
+#watch_pres{
+    margin-left: 60px;
+    font-size: 18px;
+}
+
+@keyframes scroll
+{
+    0%
+    {
+        transform: translateX(0);
+    }
+    100%
+    {
+        transform: translate(calc(-250px*9))
+    }
+}
+
+.slide 
+{
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    /* perspective: 100px; */
+}
+
+
+.slide>img 
+{
+    width: 100%;
+    /* transform: translate(20px); */
+}
+
+.slide-track:hover .play
+{
+    display:block
+}
+
+.fa-circle-play 
+{
+    position: absolute;
+}
+
+.cards_main{
+    width: 90%;
+    margin: auto;
+}
+
+.cards{
+    width: calc(250px*30);
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    height:2rem;
+}
+.cards>card{
+    width: 18rem;
+    border-radius: 10px;
+}
+
+.cards img{
     width: 100%;
 }
 
-.slidemain div{
-    border-radius: 10px;
+#watch_movie{
+    width: 100%;
+    margin: auto;
 }
-#watch_pre{
-    margin-left: 30px;
+.playbtn2
+{
+    position:absolute;
+    top:45%;
+    right:55%;
+    font-size: 30px;
+    color: white;
+}
+.playbtn2:hover
+{
+    cursor: pointer;
+}
+
+.card_mains{
+    width: 90%;
+    margin: auto;
+}
+
+.main2{
+    width: 100%;
+    position: relative;
+}
+
+.main2>img{
+    width: 100%;
+    height: 450px;
+}
+
+.mainText{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    color: white;
+    height: 200px;
+    width: 30%;
+}
+
+.fa-play{
+    font-size: 30px;
+    margin-top: 20px;
+    background-color: white;
+    width: 100px;
 }
