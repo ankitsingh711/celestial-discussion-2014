@@ -9,7 +9,7 @@ search.addEventListener("click", (e) => {
         </div>
     `
     AppleTV();
-    ClickImage()
+    // ClickImage()
 
 
 })
@@ -18,7 +18,7 @@ async function AppleTV() {
 
     try {
 
-        let fetching = await fetch("https://63986336044fa481d69b935b.mockapi.io/movie/")
+        let fetching = await fetch("https://63986336044fa481d69b935b.mockapi.io/film")
         let data = await fetching.json()
         newData = [...data];
         disPlay(data);
@@ -41,15 +41,6 @@ function disPlay(data) {
     });
 }
 
-function ClickImage() {
-    let button_img = document.querySelector("#tasks");
-
-    button_img.addEventListener("click", () => {
-        console.log("Hi diksha");
-    })
-}
-
-
 document.querySelector("#diksha").addEventListener("click", () => {
     dislpayBag()
 })
@@ -63,7 +54,7 @@ function dislpayBag() {
     });
     disPlayData(dataDiksha);
 }
-
+//let Array=[];
 function disPlayData(dataDiksha) {
     if (dataDiksha.length == 0) {
         alert("Movie Not Found !");
@@ -76,9 +67,21 @@ function disPlayData(dataDiksha) {
             let image = document.createElement("img")
             image.id = "imgPoster"
             image.setAttribute("src", el.poster)
-
+          /*  image.addEventListener("click",()=>{
+                console.log("working");
+                    Array.push(el);      
+            })
+            localStorage.setItem("selected_item",JSON.stringify(Array))*/
+            
             div.append(image)
             document.querySelector("#tasks").append(div)
         });
     }
 }
+
+
+// function addFun(Array){
+   
+//     // window.location.href="movie.html"
+// }
+// addFun(Array)
