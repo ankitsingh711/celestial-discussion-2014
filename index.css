@@ -2,7 +2,8 @@ header{
     position: fixed;
     background-color:rgb(0,0,0) ;
     width: 100%;
-    height: 50px;
+    height: 70px;
+   
 
 
 }
@@ -15,15 +16,15 @@ nav>.navbar{
    margin: 10px 20px;
    justify-content: space-between;
    align-items: center;
-
+    align-content: center;
 }
 nav .navbar .btn{
   display: flex;
   justify-content: end;
 }
 
- .nav_logo>a>img{ 
-   width: 8%;
+ .nav_logo>img{ 
+   width: 20%;
 }
 .btn>.search{
     font-size: 17px;
@@ -50,8 +51,6 @@ nav .navbar .btn{
     align-items: center;
     border-radius: 1ch;
     padding-top: 5px;
-    text-decoration: none;
-    border-bottom: none;
     
    
 }
@@ -59,7 +58,7 @@ nav .navbar .btn{
     color: antiquewhite;
     text-decoration: none;
 }
-
+/* 
 @media all and (min-width:300px) and (max-width :900px) {
     header{
         width:50%;
@@ -68,7 +67,7 @@ nav .navbar .btn{
         width: 70%;
        
     }
-}
+} */
 
 
 /* /////////// */
@@ -84,7 +83,117 @@ nav .navbar .btn{
 }
 
 
+/* /////////////////// */
+/* footercss */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.parent{
+    
+  width: 100%;
+  height: 100px;
+  vertical-align: middle;
+  background-color: #151517;
+  overflow: hidden;
+  position: relative;
+ 
+}
+.child{
+    width: 130px;
+    height: 30px;
+    background-color: white;
+    font-weight: bolder;
+    position:absolute;
+    border-radius: 5px;
+ right:35px;
+ bottom:50px;
+
+}
+.parent>h3{
+    color: #EEEEEE;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.parent>p>a{
+    text-decoration: none;
+    color: #1a6ece;
+}
+.parent>p{
+    color: #A5A5A6;
+    margin-left: 30px;
+}
+h4{
+    margin-top:5px;
+    text-align: center;
+    color:black;
+  
+}
+#right{
+    text-align: right;
+    margin-top: 10px;
+    color: #A5A5A6;
+    margin-right: 20px;
+}
+.parent{
+    position:fixed;
+    bottom: 0;
+}
 
 
 
 
+/* ///////////////////////////////////////////////////////////////////////// */
+
+/* search functinality */
+#diksha{
+    background-color: blueviolet;
+    padding: 0px 22px;
+    color:white;
+   font: size 30px;
+   
+    border:none;
+    border-radius:1ch;
+}
+
+body{
+    background-color: rgb(54, 48, 48);
+    color:white;
+}
+
+main{
+    padding-top:100px;
+    margin: auto;
+}
+#heading{
+    margin-left: 20px;
+    margin-bottom: -10px;
+}
+
+#tasks{
+    width: 100%;
+    margin-top: 25px ;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+}
+
+#tasks:hover{
+    cursor: pointer;
+}
+
+#smallCards{
+    margin: auto;
+    width: 95%;
+    height: 95%;
+   /* border: 1px solid #ff0000; */
+     border-radius: 18px; 
+}
+#imgPoster{
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+}

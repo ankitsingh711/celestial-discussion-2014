@@ -1,26 +1,3 @@
-
-
-//   async function fetchdata(){
-//     try {
-//         let res = await fetch("https://63986336044fa481d69b935b.mockapi.io/movie/",{
-//             method:"GET",
-//             headers: {
-//               	"Content-Type":"application/json"
-//               	}
-            
-//         })
-//     let data = await res.json()
-//     console.log(data)
-//         //  DisplayData(data)
-//         //  display(data)
-//     } catch (error) {
-//         alert("err")
-//         console.log(err)
-//     }
-   
-// }
-// fetchdata()
-
 let search = document.querySelector(".search")
 
 search.addEventListener("click", (e) => {
@@ -41,7 +18,7 @@ async function AppleTV() {
 
     try {
 
-        let fetching = await fetch("https://63986336044fa481d69b935b.mockapi.io/film")
+        let fetching = await fetch("https://63986336044fa481d69b935b.mockapi.io/movie/")
         let data = await fetching.json()
         newData = [...data];
         disPlay(data);
@@ -107,8 +84,3 @@ function disPlayData(dataDiksha) {
         });
     }
 }
-
-
-
-
-

@@ -1,0 +1,162 @@
+h1{
+    background-color: blueviolet;
+    
+    color: white;
+    text-align: center;
+    margin: auto;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+#task>.movie{
+display: grid;
+grid-template-columns: repeat(2,1fr);
+grid-template-rows: 200px;
+/* justify-content: spa;  */
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+gap: 10px;
+
+}
+
+#task>.movie>.des{
+text-align: center;
+
+/* padding-top: 50px; */
+background-color: rgb(145, 130, 130);
+color:black
+
+}
+#task>.movie>.des>button{
+background-color: blueviolet;
+border: none;
+padding: 10px;
+color: white;
+gap: 10px;
+}
+#task>.movie>.des>button:hover{
+background-color: grey;
+color: white;
+}
+#task>.movie>.des>#remove:hover{
+background-color: grey;
+color: white;
+}
+#task>.movie>.des>#remove{
+background-color: red;
+border: none;
+padding: 10px;
+color: white;
+gap: 10px;
+}
+#task>.movie>.img>img{
+height: 200px;
+width: 100%;
+padding: 5px;
+}
+/* #img{
+width: 50%;
+} */
+body{
+background-color: rgb(54, 48, 48);
+color: white;
+
+}
+label{
+font-weight: bold;
+}
+form{
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+width: 20%;
+padding: 80px;
+background-color: rgb(18, 17, 17);
+height: 300px;
+font-weight: 600;
+/* margin: ; */
+}
+form>input, select{
+font-size: large;
+font-weight: bold;
+color: black;
+}
+
+#btn{
+background-color: blueviolet;
+color: antiquewhite;
+border: none;
+padding: 8px 12px;
+background-color: #2D2D2D;
+}
+#main{
+display: flex;
+
+}
+h1{
+background-color: rgb(145, 130, 130);
+color: black
+}
+#btn{
+padding: 5px 70px;
+}
+
+#container{
+display:flex;
+
+}
+#container>div>input{
+padding: 10px;
+}
+
+/* //////////// */
+main{
+padding-top:60px;
+margin: auto;
+}
+#heading{
+margin-left: 20px;
+margin-bottom: -10px;
+}
+
+#tasks{
+width: 100%;
+margin-top: 25px ;
+height: auto;
+display: grid;
+grid-template-columns: repeat(5,1fr);
+grid-template-rows: auto;
+gap: 10px;
+}
+
+#tasks:hover{
+cursor: pointer;
+}
+
+#smallCards{
+margin: auto;
+width: 95%;
+height: 95%;
+
+/* border: 1px solid #ff0000; */
+ border-radius: 18px; 
+}
+#imgPoster{
+width: 100%;
+height: 100%;
+border-radius: 18px;
+}
+
+#kkk{
+background-color: red;
+border: none;
+padding: 5px 10px;
+padding-right: 20px;
+padding-left: 10px;
+color: antiquewhite;
+
+}
+
+#delete{
+    background-color: grey;
+    border: none;
+    padding: 5px 20px;
+    /* m */
+    color: antiquewhite;
+    }

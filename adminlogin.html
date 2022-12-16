@@ -30,13 +30,10 @@
         </nav>
     </header>
     <main>
-        <!-- <div class="nav">
-            <a href="./login.html">Login</a>
-            <a href="./Signup.html">Signin</a>
-          </div> -->
+       
           <div id="signin">
             
-            <h1>Login For Smart Tv trial</h1>
+            <h1>Admin Login Page</h1>
             <br>
             <p>Start tracking your productivity in less than a minute!</p>
             <br>
@@ -51,7 +48,8 @@
               <input type="password"  id="password" placeholder="Type in your password">
               <br>
               <br>
-              <input type="submit" value="Login" id="sn"  />
+              <!-- <a href="./admin.html"><input type="submit" value="Login" id="sn"/></a> -->
+              <a href="./admin.html"><input type="submit" value="Submit" id="sn" /></a>
               <br>
               <br>
               <p>Try free for 14 days. No credit card required. </p>
@@ -59,48 +57,53 @@
                <p>By signing up, you agree to our <u>terms</u> and <u>privacy policy.</u></p>
                <br>
                <br>
-               <h4>Don’t have an account yet?<a href="./Signup.html"><h3><u>Sign up here!</u></h3></a></h4>
+               <!-- <h4>Don’t have an account yet?<a href="./Signup.html"><h3><u>Sign up here!</u></h3></a></h4> -->
             </form>
           </div>
         </main>
 </body>
 </html>
-<script>
-    let data = JSON.parse(localStorage.getItem("account-data"))
+ <script>
+    // let data = JSON.parse(localStorage.getItem("account-data"))
      
+    let log = document.getElementById("sn")
+    log.addEventListener("click", function(e){
+        e.preventDefault()
+        window.location.href ="admin.html"
+        console.log("hii")
+    })
   
-       let newls = document.querySelector("form");
-       newls.addEventListener("submit" ,function(event){
-        event.preventDefault();
-       let mail = document.querySelector("#email").value
-       let pass = document.querySelector("#password").value
-         let flag=false;
-       for(let i=0; i<data.length; i++){
-        if(mail==data[i].email && pass==data[i].password){
-          flag=true;
+    //    let newls = document.querySelector("form");
+    //    newls.addEventListener("submit" ,function(event){
+    //     event.preventDefault();
+    //    let mail = document.querySelector("#email").value
+    //    let pass = document.querySelector("#password").value
+    //      let flag=false;
+    //    for(let i=0; i<data.length; i++){
+    //     if(mail==data[i].email && pass==data[i].password){
+    //       flag=true;
          
-       }
-      }
+    //    }
+    //   }
        
-       if(flag==true){
+    //    if(flag==true){
         
-         alert("logged in Successfully")
-       
-       
-        // console.log(window.location.href="index.html")
-         window.location.href="index1.html";
-      }
-      else{
-        alert("Wrong Password or Email")
-        // window.location.href="Signup.html"
-      }
+    //      alert("logged in Successfully")
+    //     window.location.href="index1.html";
+    //     // console.log(window.location.href="index.html")
+        
+    //   }
+    //   else{
+    //     alert("Wrong Password or Email")
+    //     // window.location.href="Signup.html"
+    //   }
      
     
   
-       });
+    //    });
   
   
        
        
   
-  </script>
+  </script> 
