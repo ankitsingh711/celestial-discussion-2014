@@ -88,12 +88,14 @@ search.addEventListener("click", (e) => {
             <!-- Append here -->
         </div>
     `
+    
    
     AppleTV();
     ClickImage()
    
 
 })
+
 var newData = []
 async function AppleTV() {
 
@@ -134,6 +136,8 @@ function ClickImage() {
 
 
 document.querySelector("#diksha").addEventListener("click", () => {
+  document.querySelector("#mainfunc").style.backgroundColor = 'white';
+
     dislpayBag()
 })
 
@@ -163,6 +167,7 @@ function disPlayData(dataDiksha) {
             div.append(image)
             document.querySelector("#tasks").append(div)
         });
+       
     }
 }
 
