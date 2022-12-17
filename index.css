@@ -7,6 +7,10 @@ header{
 
 
 }
+body{
+    background-color: rgb(54, 48, 48);
+    color: white;
+}
 *{
     margin: 0;
     padding: 0;
