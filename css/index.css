@@ -604,7 +604,7 @@ main{
     padding: 0;
 }
 .parent{
-    
+  
   width: 100%;
   height: 100px;
   vertical-align: middle;
@@ -622,8 +622,8 @@ main{
     margin-top: 20px;
     position:absolute;
     border-radius: 5px;
- right:35px;
- bottom:50px;
+   right:35px;
+   bottom:50px;
 
 
 }
